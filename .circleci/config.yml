@@ -5,17 +5,24 @@ orbs:
 jobs:
   say-hello:
     executor: newman/postman-newman-docker
+    steps:
+      - checkout
+      - run:
+          name: "Say hello"
+          command: "echo Hello, world!"
+
+  run-collection:
+    executor: newman/postman-newman-docker
 
     steps:
       - checkout
       - newman/newman-run:
           collection: https://api.getpostman.com/collections/14272639-1fa42790-4f27-4dee-9c17-2646888cb4cb?apikey=$POSTMAN_API_KEY
-      - run:
-          name: "Say hello"
-          command: "echo Hello, $MY_NAME"
+
 
 
 workflows:
   say-hello-workflow:
     jobs:
       - say-hello
+      - run-collection
