@@ -17,7 +17,7 @@ jobs:
     steps:
       - checkout
       - newman/newman-run:
-          collection: https://api.getpostman.com/collections/14272639-1fa42790-4f27-4dee-9c17-2646888cb4cb?apikey=$POSTMAN_API_KEY
+          collection: https://api.getpostman.com/collections/14272639-5b4a06b0-ed2c-4e9f-b133-e3be0e3881f4?apikey=$POSTMAN_API_KEY
 
 
 
