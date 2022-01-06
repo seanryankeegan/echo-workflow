@@ -12,7 +12,9 @@ jobs:
           command: "echo Hello, world!"
 
   run-collection:
-    executor: newman/postman-newman-docker
+    docker:
+      # replace with your preferred image
+      - image: postman/newman:latest
 
     steps:
       - checkout
