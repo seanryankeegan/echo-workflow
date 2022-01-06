@@ -14,7 +14,7 @@ jobs:
   run-collection:
     docker:
       # replace with your preferred image
-      - image: postman/newman:latest
+      - image: postman/newman@0.0.2
 
     steps:
       - checkout
